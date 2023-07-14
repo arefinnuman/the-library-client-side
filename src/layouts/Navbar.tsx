@@ -1,4 +1,11 @@
+/* eslint-disable @typescript-eslint/no-unsafe-return */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+import { FcReading } from "react-icons/fc";
+import { SiWantedly } from "react-icons/si";
 import { Link } from "react-router-dom";
+import FutureReading from "../components/FutureReading";
+import ReadingList from "../components/ReadingList";
 
 const Navbar = () => {
   const navBarItems = (
@@ -13,7 +20,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -45,8 +52,42 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{navBarItems}</ul>
       </div>
       <div className="navbar-end">
+        <button
+          className="btn btn-sm btn-outline btn-accent mx-3"
+          onClick={() => window.readingModal.showModal()}
+        >
+          <FcReading />
+        </button>
+
+        <div
+          className="mr-3 btn btn-sm btn-outline btn-primary"
+          onClick={() => window.futureReading.showModal()}
+        >
+          <SiWantedly />
+        </div>
+
         <a className="btn btn-sm btn-outline btn-primary">Login</a>
       </div>
+
+      <dialog id="readingModal" className="modal">
+        <form method="dialog" className="modal-box">
+          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+            ✕
+          </button>
+          <h3 className="font-bold text-lg">Reading List!</h3>
+          <ReadingList />
+        </form>
+      </dialog>
+
+      <dialog id="futureReading" className="modal">
+        <form method="dialog" className="modal-box">
+          <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
+            ✕
+          </button>
+          <h3 className="font-bold text-lg">Plan to read for future</h3>
+          <FutureReading />
+        </form>
+      </dialog>
     </div>
   );
 };
