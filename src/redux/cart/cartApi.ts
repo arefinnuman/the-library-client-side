@@ -30,6 +30,18 @@ const cartApi = api.injectEndpoints({
       query: (id) => `/reading-list/marked-as-read/${id}`,
       providesTags: ["readingList"],
     }),
+
+    addToWishList: builder.mutation({
+      query: (data) => ({
+        url: "/wish-list/create-wishList",
+        method: "POST",
+        body: { ...data },
+      }),
+    }),
+
+    getAllWishList: builder.query({
+      query: (id) => `/wish-list/${id}`,
+    }),
   }),
 });
 
@@ -38,4 +50,6 @@ export const {
   useGetReadingListQuery,
   useMarkedAsReadMutation,
   useGetMarkedAsReadQuery,
+  useAddToWishListMutation,
+  useGetAllWishListQuery,
 } = cartApi;

@@ -28,7 +28,7 @@ export default function Login() {
 
   const [user, setUser] = useState("");
   const [err, setErr] = useState("");
-  const [password, setPassword] = useState("");
+  const [password] = useState("");
   const navigate = useNavigate();
 
   const [login] = useLoginMutation();

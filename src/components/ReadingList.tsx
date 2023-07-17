@@ -50,7 +50,7 @@ const ReadingList = () => {
       </div>
 
       <div>
-        <h1 className="text-xl font-sans font-semibold my-4">
+        <h1 className="text-xl font-sans font-semibold my-4 border-t border-gray-500">
           These are all read by you
         </h1>
         {markedAsReadReadingList?.data?.map((book: any) => (
