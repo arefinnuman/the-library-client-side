@@ -16,6 +16,9 @@ const Navbar = () => {
       <li>
         <Link to="/books">Explore</Link>
       </li>
+      <li>
+        <Link to="/add-books">Add Books</Link>
+      </li>
     </>
   );
 
@@ -56,7 +59,7 @@ const Navbar = () => {
           className="btn btn-sm btn-outline btn-accent mx-3"
           onClick={() => window.readingModal.showModal()}
         >
-          <FcReading />
+          <FcReading /> Reading List
         </button>
 
         <div
@@ -66,7 +69,9 @@ const Navbar = () => {
           <SiWantedly />
         </div>
 
-        <a className="btn btn-sm btn-outline btn-primary">Login</a>
+        <Link to="/login" className="btn btn-sm btn-outline btn-primary">
+          Login
+        </Link>
       </div>
 
       <dialog id="readingModal" className="modal">
