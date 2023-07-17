@@ -33,6 +33,10 @@ const booksApi = api.injectEndpoints({
       }),
       invalidatesTags: ["books"],
     }),
+
+    getLastTenBooks: builder.query({
+      query: () => "/books/last-ten-books",
+    }),
   }),
 });
 
@@ -42,4 +46,5 @@ export const {
   useGetReviewsQuery,
   usePostBookMutation,
   usePostReviewMutation,
+  useGetLastTenBooksQuery,
 } = booksApi;
