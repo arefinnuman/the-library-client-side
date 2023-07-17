@@ -37,6 +37,7 @@ const cartApi = api.injectEndpoints({
         method: "POST",
         body: { ...data },
       }),
+      invalidatesTags: ["wishList"],
     }),
 
     getAllWishList: builder.query({
