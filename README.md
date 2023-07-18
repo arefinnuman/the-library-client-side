@@ -1,11 +1,11 @@
 Web Link: [https://thelibrary-1.web.app/]()
 
-client side repo: [https://github.com/arefinnuman/the-library-client]()-side
+client side repo: [https://github.com/arefinnuman/the-library-client-side]()
 
 server side repo: [https://github.com/arefinnuman/the-library-server-side]()
 
 
-*I skipped the login part and searching/ sorting part in front-end. I am using this project with custom authentication. I cannot implement it. I hadn't enough time cause i am currently 10am to 5pm job. So far hope you get my point.*
+*I skipped the login part and searching/ sorting part in front-end. I am using this project with custom authentication. I cannot implement it. I hadn't enough time cause i am currently  doing 10am to 5pm job. So far hope you get my point.  But i implement all the logic in server side.* 
 
 
 ---
