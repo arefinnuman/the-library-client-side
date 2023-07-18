@@ -8,38 +8,29 @@
 /* eslint-disable @typescript-eslint/no-unsafe-call */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 
-import {
-  ChangeEvent,
-  FormEvent,
-  RefObject,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { ChangeEvent, FormEvent, useState } from "react";
+import { Link } from "react-router-dom";
 import { useLoginMutation } from "../redux/auth/authApi";
 
 export default function Login() {
   const [userNameInputValue, setUserNameInputValue] = useState<string>("");
   const [passwordInputValue, setPasswordInputValue] = useState<string>("");
 
-  const userRef: RefObject<HTMLInputElement> = useRef(null);
-  const errRef: RefObject<HTMLParagraphElement> = useRef(null);
+  // const userRef: RefObject<HTMLInputElement> = useRef(null);
 
-  const [user, setUser] = useState("");
-  const [err, setErr] = useState("");
-  const [password] = useState("");
-  const navigate = useNavigate();
+  // const [user, setUser] = useState("");
+  // const [, setErr] = useState("");
+  // const [password] = useState("");
+
+  // useEffect(() => {
+  //   userRef?.current?.focus();
+  // }, []);
+
+  // useEffect(() => {
+  //   setErr("");
+  // }, [user, password]);
 
   const [login] = useLoginMutation();
-
-  useEffect(() => {
-    userRef?.current?.focus();
-  }, []);
-
-  useEffect(() => {
-    setErr("");
-  }, [user, password]);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();

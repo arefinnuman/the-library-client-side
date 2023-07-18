@@ -9,13 +9,8 @@ export default function HomeBookCard({ book }: IProps) {
   return (
     <div>
       <article className="flex flex-col ">
-        <a
-          rel="noopener noreferrer"
-          href="#"
-          aria-label="Te nulla oportere reprimique his dolorum"
-        >
-          <img alt="" className="object-cover w-full h-52 d" src={image} />
-        </a>
+        <img alt="" className="object-cover w-full h-52 d" src={image} />
+
         <div className="flex flex-col flex-1 p-6">
           <a
             rel="noopener noreferrer"

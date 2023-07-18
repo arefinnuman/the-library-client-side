@@ -28,8 +28,10 @@ export default function Offer() {
               Modern solutions to all kinds of problems
             </h2>
             <p className="mt-4 mb-8 text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-              voluptatum rem amet!
+              The Library also offers a user-friendly interface, allowing you to
+              search, browse, and organize your digital library experience
+              efficiently. Save your favorite materials, create personalized
+              reading lists, and easily bookmark sections for future reference.
             </p>
             <Link to="/books">
               <button className="self-start px-10 py-3 text-lg font-medium rounded-3xl bg-primary text-white">
